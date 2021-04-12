@@ -1,20 +1,84 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if(license === 'MIT') {
+    return(`![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`)
+  } else if (license === 'GPLv2') {
+    return(`![GPLv2 license](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`)
+  } else if (license === 'Apache') {
+    return(`![Apache license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`)
+  } else if (license === "none") {
+    return ('');
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if(license === 'MIT') {
+    return(`[License: MIT](https://opensoure.org/licenses/MIT)`)
+  } else if (license === 'GPLv2') {
+    return(`[GPLv2 license](https://opensoure.org/licenses/old-lincenses/gpl-2.0.en.html)`)
+  } else if (license === 'Apache') {
+    return(`[Apache license](https://opensoure.org/licenses/Apache)`)
+  } else if (license === "none") {
+    return ('');
+  }
+}
+
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  var licenseLink = renderLicenseLink(license);
+  if (license === 'MIT' || 'Apache' || 'GPLv2') {
+      return ('Licensed under the ' + licenseLink)
+  } else if (license === 'none') {
+      return ('')
+  }
+
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.Title}
 
-`;
+${renderLicenseBadge(data.license)}
+
+https://github.com/${data.Username}/${data.Title}
+
+
+# Description
+
+${data.Description}
+
+# Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+# Installation
+What is needed to install this application? ${data.Installation}
+
+# Usage
+In order to use this app, run the app in the: ${data.Usage}
+
+# License
+Which license have you chosen for this project? ${renderLicenseSection(data.license)}
+
+# Contributing
+​Who was involved in contributing to this project? ${data.Contributing}
+
+# Tests
+The following is needed to run the test: ${data.Tests}
+
+# Questions
+If you have any questions about the repo, open an issue or contact my ${data.Username} account or  directly at : ${data.Email}.
+`
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown;}

@@ -52,11 +52,11 @@ const questions = [{
     
     type: "input",
     message: "What is your GitHub user account name?",
-    name: "Questions"
+    name: "Username"
 },{
     type: "input",
     message: "What is your email address?",
-    name: "Questions"
+    name: "Email"
 }
 ];
 
@@ -79,7 +79,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions)
+    inquirer
+        .prompt(questions)
         .then(function(data) {
             writeToFile("README.md", generateMarkDown(data));
             console.log(data)
