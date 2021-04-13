@@ -31,13 +31,13 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  var licenseLink = renderLicenseLink(license);
+  // var licenseLink = renderLicenseLink(license);
   if (license === 'MIT' || 'Apache' || 'GPLv2') {
-      return ('Licensed under the ' + licenseLink)
+      return ('Licensed under the ' + license)
   } else if (license === 'none') {
       return ('')
   }
-
+}
 
 
 // TODO: Create a function to generate markdown for README
@@ -80,4 +80,4 @@ If you have any questions about the repo, open an issue or contact my ${data.Use
 `
 }
 
-module.exports = generateMarkdown;}
+module.exports = generateMarkdown;
