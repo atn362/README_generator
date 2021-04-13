@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
   } else if (license === 'GPLv2') {
     return(`![GPLv2 license](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`)
   } else if (license === 'Apache') {
-    return(`![Apache license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`)
+    return(`![Apache license](https://img.shields.io/badge/License-Apache%202.0-green.svg)`)
   } else if (license === "none") {
     return ('');
   }
@@ -16,11 +16,11 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license === 'MIT') {
-    return(`[License: MIT](https://opensoure.org/licenses/MIT)`)
+    return(`[License: MIT](https://opensource.org/licenses/MIT)`)
   } else if (license === 'GPLv2') {
-    return(`[GPLv2 license](https://opensoure.org/licenses/old-lincenses/gpl-2.0.en.html)`)
+    return(`[GPLv2 license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`)
   } else if (license === 'Apache') {
-    return(`[Apache license](https://opensoure.org/licenses/Apache)`)
+    return(`[Apache license](https://www.apache.org/licenses/LICENSE-2.0)`)
   } else if (license === "none") {
     return ('');
   }
@@ -48,9 +48,6 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.license)}
 
-https://github.com/${data.Username}/${data.Title}
-
-
 # Description
 
 ${data.Description}
@@ -70,7 +67,7 @@ What is needed to install this application? ${data.Installation}
 In order to use this app, run the app in the: ${data.Usage}
 
 # License
-Which license have you chosen for this project? ${renderLicenseSection(data.license)}
+Which license have you chosen for this project? ${renderLicenseSection(data.License)}
 
 # Contributing
 ​Who was involved in contributing to this project? ${data.Contributing}

@@ -39,7 +39,7 @@ const questions = [{
     name: "Contribution"
 },{
     
-    type: "checkbox",
+    type: "list",
     message: "Which license was used for this project?",
     name: "License",
     choices: ["MIT", "GPLv2", "Apache", "none"]
@@ -66,26 +66,24 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err) {
         console.log(fileName)
         console.log(data)
-        if(err) {
+        if (err) {
             return console.log(err)
         } else {
             console.log("success")
         }
-
     })
 
-       
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-        .prompt(questions)
+    inquirer.prompt(questions)
         .then(function(data) {
             writeToFile("README.md", generateMarkdown(data));
             console.log(data)
-        
+
         })
+
 }
 
 // Function call to initialize app
