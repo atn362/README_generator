@@ -44,7 +44,8 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   
-  # ${data.title}
+# Title 
+  ${data.title}
 
 ${renderLicenseBadge(data.license)}
 
@@ -56,7 +57,7 @@ ${data.Description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contribution](#contribution)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -69,14 +70,14 @@ In order to use this app, run the app in the: ${data.Usage}
 # License
 Which license have you chosen for this project? ${renderLicenseSection(data.License)}
 
-# Contributing
+# Contribution
 ​Who was involved in contributing to this project? ${data.Contributing}
 
 # Tests
 The following is needed to run the test: ${data.Tests}
 
 # Questions
-If you have any questions about the repo, open an issue or contact my ${data.Username} account or  directly at : ${data.Email}.
+If you have any questions about the repo, open an issue or contact my git hub account at ${data.Username} or  directly at : ${data.Email}.
 `
 }
 
