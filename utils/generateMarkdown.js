@@ -33,7 +33,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   // var licenseLink = renderLicenseLink(license);
   if (license === 'MIT' || 'Apache' || 'GPLv2') {
-      return ('Licensed under the ' + license)
+      return ('Licensed under the ' + license + " badge/link.")
   } else if (license === 'none') {
       return ('')
   }
