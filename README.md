@@ -7,6 +7,7 @@
 ReadMe Generator
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[License: MIT](https://opensource.org/licenses/MIT)
 
 # Description
 

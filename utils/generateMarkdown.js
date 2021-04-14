@@ -49,6 +49,7 @@ function generateMarkdown(data) {
 ${data.Title}
 
 ${renderLicenseBadge(data.License)}
+${renderLicenseLink(data.License)}
 
 # Description
 
