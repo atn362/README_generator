@@ -45,15 +45,17 @@ function generateMarkdown(data) {
   return `
   
 # Title 
-  ${data.title}
 
-${renderLicenseBadge(data.license)}
+${data.Title}
+
+${renderLicenseBadge(data.License)}
 
 # Description
 
 ${data.Description}
 
 # Table of Contents 
+* [Title](#title)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -71,7 +73,7 @@ In order to use this app, run the app in the: ${data.Usage}
 Which license have you chosen for this project? ${renderLicenseSection(data.License)}
 
 # Contribution
-​Who was involved in contributing to this project? ${data.Contributing}
+​Who was involved in contributing to this project? ${data.Contribution}
 
 # Tests
 The following is needed to run the test: ${data.Tests}
