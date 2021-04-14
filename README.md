@@ -1,5 +1,7 @@
+# Video of Presentation
+"https://drive.google.com/file/d/10dEC1cbr-A0G3k3F_l6GNO8iK3meA1bl/preview"
 
-  
+
 # Title 
 
 ReadMe Generator
@@ -20,7 +22,7 @@ Easy to use template, with prompts to create useful ReadMe files for future proj
 * [Questions](#questions)
 
 # Installation
-What is needed to install this application? Requirre fs, inquire and a path to the generateMarkdown folder
+What is needed to install this application? Require fs, inquire and a path to the generateMarkdown folder
 
 # Usage
 In order to use this app, run the app in the: You have to run it in the terminal.  Bash in my case.
