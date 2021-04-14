@@ -6,9 +6,6 @@
 
 ReadMe Generator
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-[License: MIT](https://opensource.org/licenses/MIT)
-
 # Description
 
 Easy to use template, with prompts to create useful readme files for future projects.
@@ -29,7 +26,10 @@ What is needed to install this application? Requires fs, inquire and a path to t
 In order to use this app, run the app in the: You have to run it in the terminal. Bash in my case.
 
 # License
-Which license have you chosen for this project? Licensed under the MIT badge/link.
+Which license have you chosen for this project? Licensed under the MIT badge/link. 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[License: MIT](https://opensource.org/licenses/MIT)
+
 
 # Contribution
 ​Who was involved in contributing to this project? n/a Just myself.

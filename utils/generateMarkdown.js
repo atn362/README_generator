@@ -48,8 +48,7 @@ function generateMarkdown(data) {
 
 ${data.Title}
 
-${renderLicenseBadge(data.License)}
-${renderLicenseLink(data.License)}
+
 
 # Description
 
@@ -72,6 +71,8 @@ In order to use this app, run the app in the: ${data.Usage}
 
 # License
 Which license have you chosen for this project? ${renderLicenseSection(data.License)}
+${renderLicenseBadge(data.License)}
+${renderLicenseLink(data.License)}
 
 # Contribution
 ​Who was involved in contributing to this project? ${data.Contribution}
