@@ -79,7 +79,7 @@ Which license have you chosen for this project? ${renderLicenseSection(data.Lice
 The following is needed to run the test: ${data.Tests}
 
 # Questions
-If you have any questions about the repo, open an issue or contact my git hub account at ${data.Username} or  directly at : ${data.Email}.
+If you have any questions about the repo, open an issue or contact my git hub account at "www.github.com/${data.Username}" or  directly at : ${data.Email}.
 `
 }
 
